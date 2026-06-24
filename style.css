@@ -20,6 +20,15 @@ body{
     padding:15px;
 }
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+    -webkit-tap-highlight-color:transparent;
+    touch-action:manipulation;
+}
+
 /* ==========================
    SHARED
 ========================== */
@@ -36,13 +45,17 @@ button{
 }
 
 button:hover{
-    transform:scale(1.03);
+    transform:none;
 }
 
 button:active{
-    transform:scale(0.98);
+    transform:none;
 }
 
+*{
+    -webkit-tap-highlight-color:transparent;
+    touch-action:manipulation;
+}
 /* ==========================
    MENU
 ========================== */
@@ -79,7 +92,7 @@ button:active{
 
 #gameScreen{
     width:100%;
-    max-width:650px;
+    max-width:none;
     text-align:center;
 }
 
@@ -97,8 +110,8 @@ button:active{
 ========================== */
 
 #board{
-    width:min(92vw,550px);
-    height:min(92vw,550px);
+    width:min(97vw,700px);
+    height:min(97vw,700px);
 
     margin:auto;
 
@@ -215,8 +228,8 @@ button:active{
 @media (max-width:480px){
 
     #board{
-        width:95vw;
-        height:95vw;
+        width:97vw;
+        height:97vw;
     }
 
     .controls{
