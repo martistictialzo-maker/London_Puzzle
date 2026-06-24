@@ -1,0 +1,236 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100vh;
+    font-family:Arial,sans-serif;
+    background:#1f2937;
+    color:white;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:15px;
+}
+
+/* ==========================
+   SHARED
+========================== */
+
+.hidden{
+    display:none !important;
+}
+
+button{
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+button:hover{
+    transform:scale(1.03);
+}
+
+button:active{
+    transform:scale(0.98);
+}
+
+/* ==========================
+   MENU
+========================== */
+
+#menuScreen{
+    width:100%;
+    max-width:500px;
+    text-align:center;
+}
+
+#menuScreen h1{
+    font-size:clamp(28px,6vw,48px);
+    margin-bottom:25px;
+}
+
+.menuButtons{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.menuButtons button{
+    width:100%;
+    padding:18px;
+    font-size:22px;
+    font-weight:bold;
+    background:#3b82f6;
+    color:white;
+}
+
+/* ==========================
+   GAME
+========================== */
+
+#gameScreen{
+    width:100%;
+    max-width:650px;
+    text-align:center;
+}
+
+.topBar{
+    margin-bottom:12px;
+}
+
+#timer{
+    font-size:clamp(20px,5vw,30px);
+    font-weight:bold;
+}
+
+/* ==========================
+   BOARD
+========================== */
+
+#board{
+    width:min(92vw,550px);
+    height:min(92vw,550px);
+
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows:repeat(3,1fr);
+
+    border:4px solid white;
+
+    position:relative;
+
+    background-size:100% 100%;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.tile{
+    border:1px solid #333;
+    cursor:pointer;
+
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+}
+.empty{
+    background:rgba(110,110,110,.25);
+
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(1px);
+}
+
+/* ==========================
+   CONTROLS
+========================== */
+
+.controls{
+    margin-top:15px;
+
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.controls button{
+    min-width:110px;
+    padding:14px 18px;
+
+    font-size:18px;
+    font-weight:bold;
+
+    background:#2563eb;
+    color:white;
+}
+
+#undoBtn{
+    background:#f59e0b;
+}
+
+#resetBtn{
+    background:#ef4444;
+}
+
+#backBtn{
+    background:#6b7280;
+}
+
+/* ==========================
+   WIN BOX
+========================== */
+
+#winBox{
+    margin-top:20px;
+}
+
+#winBox h2{
+    font-size:clamp(24px,6vw,40px);
+    margin-bottom:12px;
+    color:#4ade80;
+}
+
+#retryBtn{
+    padding:14px 24px;
+    font-size:20px;
+    font-weight:bold;
+
+    background:#22c55e;
+    color:white;
+}
+
+/* ==========================
+   TABLETS
+========================== */
+
+@media (min-width:768px){
+
+    .menuButtons{
+        flex-direction:row;
+        justify-content:center;
+    }
+
+    .menuButtons button{
+        width:180px;
+    }
+
+    .controls button{
+        min-width:140px;
+    }
+}
+
+/* ==========================
+   SMALL PHONES
+========================== */
+
+@media (max-width:480px){
+
+    #board{
+        width:95vw;
+        height:95vw;
+    }
+
+    .controls{
+        flex-direction:column;
+    }
+
+    .controls button{
+        width:100%;
+    }
+
+    .menuButtons button{
+        font-size:20px;
+        padding:16px;
+    }
+}
+
+

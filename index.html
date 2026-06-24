@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>London Puzzle Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="menuScreen">
+    <h1>London Puzzle Practice</h1>
+
+    <div class="menuButtons">
+        <button onclick="startPuzzle('cup')">☕ Cup</button>
+        <button onclick="startPuzzle('crown')">👑 Crown</button>
+        <button onclick="startPuzzle('car')">🚕 Car</button>
+    </div>
+</div>
+
+<div id="gameScreen" class="hidden">
+
+    <div class="topBar">
+        <span id="timer">Time: 0.0s</span>
+    </div>
+
+    <div id="board"></div>
+
+    <div class="controls">
+        <button id="undoBtn">Undo</button>
+        <button id="resetBtn">Reset</button>
+        <button id="backBtn">Back</button>
+    </div>
+
+    <div id="winBox" class="hidden">
+        <h2>Puzzle Complete!</h2>
+        <button id="retryBtn">Retry</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
