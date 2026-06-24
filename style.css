@@ -138,8 +138,8 @@ button:active{
 .empty{
     background:rgba(30,30,30,.50);
 
-    backdrop-filter:blur(2.5px);
-    -webkit-backdrop-filter:blur(2.5px);
+    backdrop-filter:blur(2.8px);
+    -webkit-backdrop-filter:blur(2.8px);
 }
 
 /* ==========================
